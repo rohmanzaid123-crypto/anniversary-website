@@ -1,0 +1,17 @@
+WEBSITE ANNIVERSARY - SETUP
+
+Konfigurasi Supabase sudah dimasukkan ke index.html.
+Project URL: https://qblgjrbqhqretlibstxe.supabase.co
+Bucket: anniversary-photos
+
+PENTING:
+1. Di Supabase > Storage > Buckets > anniversary-photos > Edit bucket, aktifkan Public bucket agar gambar dapat dilihat melalui URL publik.
+2. Policies yang diperlukan pada storage.objects:
+   - SELECT untuk public (atau bucket publik untuk akses baca)
+   - INSERT untuk anon, authenticated pada bucket_id = 'anniversary-photos'
+   - DELETE untuk anon, authenticated pada bucket_id = 'anniversary-photos'
+3. Halaman ini mengizinkan semua pengunjung upload gambar (maksimum 5 MB per file) dan menghapus semua gambar. Siapa pun dapat menghapus foto orang lain. Jangan gunakan untuk foto sensitif.
+4. Publish index.html melalui GitHub Pages, Netlify, atau hosting statis lain. Buka website melalui HTTPS.
+5. Jangan pernah memasukkan Supabase Secret key atau service_role key ke file HTML. Hanya publishable key yang digunakan.
+
+Catatan: Surat dan musik pada versi ini masih berupa tampilan contoh/lokal; penyimpanan surat online belum disiapkan.
